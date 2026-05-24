@@ -19,18 +19,29 @@ It is intentionally **not** a full AI-citation simulator. It measures the *subst
 
 ## Install / Run
 
-Run with `npx` (no install):
+> **Note:** The npm publish is pending account verification. Until the npm release lands, install directly from GitHub.
+
+Run from GitHub with `npx` (no clone needed):
 
 ```bash
-npx llmo-checker https://example.com
+npx github:open-llmo/llmo-checker https://example.com
+npx github:open-llmo/llmo-checker https://example.com --json
+```
+
+Once published, the same commands work without the `github:` prefix:
+
+```bash
+npx llmo-checker https://example.com           # after npm publish
 npx llmo-checker https://example.com --json
 ```
 
-Or install globally:
+Or clone and run locally:
 
 ```bash
-npm install -g llmo-checker
-llmo-checker https://example.com
+git clone https://github.com/open-llmo/llmo-checker.git
+cd llmo-checker
+npm install
+npm run dev https://example.com
 ```
 
 Requires Node.js 20+.
