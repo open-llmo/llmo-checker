@@ -3,7 +3,10 @@
 > LLMO Score checker — measures AI-retrieval readiness of a URL.
 > Part of the [Open LLMO Research Initiative](https://llmoframework.com).
 
+[![CI](https://github.com/open-llmo/llmo-checker/actions/workflows/ci.yml/badge.svg)](https://github.com/open-llmo/llmo-checker/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/llmo-checker.svg)](https://www.npmjs.com/package/llmo-checker)
+[![npm downloads](https://img.shields.io/npm/dm/llmo-checker.svg)](https://www.npmjs.com/package/llmo-checker)
+[![node](https://img.shields.io/node/v/llmo-checker.svg)](https://nodejs.org)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 `llmo-checker` is a Lighthouse-style CLI that scores how "AI-retrievable" a given URL is. It fetches the page, runs a small set of static checks, and returns a JSON report with a single LLMO Score (0-100) plus per-check scores and notes.
