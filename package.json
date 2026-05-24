@@ -1,0 +1,58 @@
+{
+  "name": "llmo-checker",
+  "version": "0.1.0",
+  "description": "LLMO Score checker — measures AI-retrieval readiness of a URL. Part of the Open LLMO Research Initiative.",
+  "type": "module",
+  "bin": {
+    "llmo-checker": "./dist/cli.js"
+  },
+  "main": "./dist/check.js",
+  "exports": {
+    ".": "./dist/check.js",
+    "./cli": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "llmo",
+    "ai-seo",
+    "llms.txt",
+    "ai-crawler",
+    "grounding",
+    "citation",
+    "lighthouse"
+  ],
+  "author": "Ken Imoto <ken@propel-lab.com> (https://kenimoto.dev)",
+  "license": "MIT",
+  "homepage": "https://llmoframework.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-llmo/llmo-checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/open-llmo/llmo-checker/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "commander": "^12.1.0",
+    "picocolors": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
