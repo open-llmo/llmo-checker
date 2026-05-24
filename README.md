@@ -30,7 +30,7 @@ npm install -g llmo-checker
 llmo-checker https://example.com
 ```
 
-Requires Node.js 18+.
+Requires Node.js 20+.
 
 ## What it checks (v0.1)
 

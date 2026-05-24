@@ -42,7 +42,7 @@
     "url": "https://github.com/open-llmo/llmo-checker/issues"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
