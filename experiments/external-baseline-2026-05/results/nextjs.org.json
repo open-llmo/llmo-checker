@@ -1,0 +1,103 @@
+{
+  "url": "https://nextjs.org/",
+  "origin": "https://nextjs.org",
+  "timestamp": "2026-05-24T13:02:45.656Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 48,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://nextjs.org/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 7682,
+        "lineCount": 87,
+        "hasH1Title": true,
+        "linkCount": 29,
+        "sectionCount": 4
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "url": "https://nextjs.org/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /robots.txt found. AI crawlers will use default allow, but explicit posture is recommended."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "fail",
+      "score": 0,
+      "weight": 15,
+      "details": {
+        "canonical": null
+      },
+      "notes": [
+        "Missing <link rel=\"canonical\">. AI crawlers may dedupe wrong URL."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "title": "Next.js by Vercel - The React Framework",
+        "titleLength": 39,
+        "description": "Next.js by Vercel is the full-stack React framework for the web.",
+        "descriptionLength": 64,
+        "ogTitle": "Next.js by Vercel - The React Framework",
+        "ogDescription": "Next.js by Vercel is the full-stack React framework for the web.",
+        "ogType": "",
+        "h1Count": 1,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Description length 64 is outside the 80-200 sweet spot."
+      ]
+    }
+  ]
+}

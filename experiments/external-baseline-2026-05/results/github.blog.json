@@ -1,0 +1,126 @@
+{
+  "url": "https://github.blog/",
+  "origin": "https://github.blog",
+  "timestamp": "2026-05-24T13:03:21.047Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 80,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "warn",
+      "score": 65,
+      "weight": 20,
+      "details": {
+        "url": "https://github.blog/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 191152,
+        "lineCount": 1222,
+        "hasH1Title": false,
+        "linkCount": 0,
+        "sectionCount": 0
+      },
+      "notes": [
+        "Missing top-level `# Title` line.",
+        "No `## Section` headings found — links should be grouped.",
+        "No `- [Title](url)` link entries. Optional per spec, but link lists help retrieval."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://github.blog/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 269,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://github.blog/",
+        "canonicalAbsolute": "https://github.blog/",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "pass",
+      "score": 86,
+      "weight": 20,
+      "details": {
+        "blockCount": 3,
+        "typesFound": [
+          "TechArticle",
+          "BlogPosting",
+          "WebPage",
+          "ImageObject",
+          "BreadcrumbList",
+          "WebSite"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "TechArticle",
+          "BlogPosting",
+          "WebPage",
+          "BreadcrumbList",
+          "WebSite"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "title": "Home - The GitHub Blog",
+        "titleLength": 22,
+        "description": "Updates, ideas, and inspiration from GitHub to help developers build and design software.",
+        "descriptionLength": 89,
+        "ogTitle": "Home",
+        "ogDescription": "Updates, ideas, and inspiration from GitHub to help developers build and design software.",
+        "ogType": "website",
+        "h1Count": 0,
+        "htmlLang": "en-US"
+      },
+      "notes": [
+        "Found 0 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "url": "https://nodejs.org/",
+  "origin": "https://nodejs.org",
+  "timestamp": "2026-05-24T13:02:55.181Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 48,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://nodejs.org/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://nodejs.org/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 199,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "canonical": "https://nodejs.org/en",
+        "canonicalAbsolute": "https://nodejs.org/en",
+        "matchesOrigin": true,
+        "hreflangCount": 15
+      },
+      "notes": []
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "title": "Node.js — Run JavaScript Everywhere",
+        "titleLength": 35,
+        "description": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.",
+        "descriptionLength": 157,
+        "ogTitle": "Node.js — Run JavaScript Everywhere",
+        "ogDescription": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.",
+        "ogType": "",
+        "h1Count": 1,
+        "htmlLang": "en-GB"
+      },
+      "notes": []
+    }
+  ]
+}

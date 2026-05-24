@@ -1,0 +1,109 @@
+{
+  "url": "https://about.gitlab.com/",
+  "origin": "https://about.gitlab.com",
+  "timestamp": "2026-05-24T13:03:12.763Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 64,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://about.gitlab.com/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://about.gitlab.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 95,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "canonical": "https://about.gitlab.com/",
+        "canonicalAbsolute": "https://about.gitlab.com/",
+        "matchesOrigin": true,
+        "hreflangCount": 11
+      },
+      "notes": []
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 70,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [
+          "Organization",
+          "Corporation"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "Organization"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "title": "Finally, AI for the entire software lifecycle.",
+        "titleLength": 46,
+        "description": "Your intelligent orchestration platform for DevSecOps",
+        "descriptionLength": 53,
+        "ogTitle": "Finally, AI for the entire software lifecycle.",
+        "ogDescription": "Your intelligent orchestration platform for DevSecOps",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en-US"
+      },
+      "notes": [
+        "Description length 53 is outside the 80-200 sweet spot."
+      ]
+    }
+  ]
+}

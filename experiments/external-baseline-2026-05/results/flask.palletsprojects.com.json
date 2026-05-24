@@ -1,0 +1,108 @@
+{
+  "url": "https://flask.palletsprojects.com/",
+  "origin": "https://flask.palletsprojects.com",
+  "timestamp": "2026-05-24T13:03:03.308Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 39,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://flask.palletsprojects.com/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://flask.palletsprojects.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 568,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://flask.palletsprojects.com/en/stable/",
+        "canonicalAbsolute": "https://flask.palletsprojects.com/en/stable/",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "fail",
+      "score": 50,
+      "weight": 15,
+      "details": {
+        "title": "Welcome to Flask — Flask Documentation (3.1.x)",
+        "titleLength": 46,
+        "description": "",
+        "descriptionLength": 0,
+        "ogTitle": "",
+        "ogDescription": "",
+        "ogType": "",
+        "h1Count": 1,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Missing <meta name=\"description\">.",
+        "Missing OpenGraph title/description."
+      ]
+    }
+  ]
+}

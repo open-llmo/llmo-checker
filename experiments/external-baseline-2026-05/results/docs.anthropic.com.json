@@ -1,0 +1,109 @@
+{
+  "url": "https://docs.anthropic.com/",
+  "origin": "https://docs.anthropic.com",
+  "timestamp": "2026-05-24T13:03:29.890Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 64,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://docs.anthropic.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 166575,
+        "lineCount": 1587,
+        "hasH1Title": true,
+        "linkCount": 1541,
+        "sectionCount": 3
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://docs.anthropic.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 80,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "canonical": "https://platform.claude.com/docs/en/home",
+        "canonicalAbsolute": "https://platform.claude.com/docs/en/home",
+        "matchesOrigin": false
+      },
+      "notes": [
+        "Canonical points to a different origin (https://platform.claude.com). Intentional only if this page is a republished mirror."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "title": "Documentation - Claude API Docs",
+        "titleLength": 31,
+        "description": "Claude API Documentation",
+        "descriptionLength": 24,
+        "ogTitle": "Documentation",
+        "ogDescription": "Claude API Documentation",
+        "ogType": "article",
+        "h1Count": 1,
+        "htmlLang": "en-US"
+      },
+      "notes": [
+        "Description length 24 is outside the 80-200 sweet spot."
+      ]
+    }
+  ]
+}

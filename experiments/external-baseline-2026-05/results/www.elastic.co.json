@@ -1,0 +1,108 @@
+{
+  "url": "https://www.elastic.co/",
+  "origin": "https://www.elastic.co",
+  "timestamp": "2026-05-24T13:03:10.943Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 58,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://www.elastic.co/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://www.elastic.co/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 37560,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://www.elastic.co/",
+        "canonicalAbsolute": "https://www.elastic.co/",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 50,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [],
+        "parseErrors": 0,
+        "recognizedTypes": []
+      },
+      "notes": [
+        "JSON-LD present but no recognized schema.org entity types."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "title": "Elastic — The Search AI Company | Elastic",
+        "titleLength": 41,
+        "description": "Power insights and outcomes with The Elasticsearch Platform. See into your data and find answers that matter with enterprise solutions designed to help you accelerate time to insight. Try Elastic toda...",
+        "descriptionLength": 203,
+        "ogTitle": "Elastic — The Search AI Company",
+        "ogDescription": "Power insights and outcomes with The Elasticsearch Platform. See into your data and find answers that matter with enterprise solutions designed to help you accelerate time to insight. Try Elastic toda...",
+        "ogType": "article",
+        "h1Count": 1,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Description length 203 is outside the 80-200 sweet spot."
+      ]
+    }
+  ]
+}

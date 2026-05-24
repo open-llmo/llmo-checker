@@ -1,0 +1,110 @@
+{
+  "url": "https://github.com/",
+  "origin": "https://github.com",
+  "timestamp": "2026-05-24T13:03:14.763Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 67,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 90,
+      "weight": 20,
+      "details": {
+        "url": "https://github.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 28735,
+        "lineCount": 178,
+        "hasH1Title": true,
+        "linkCount": 0,
+        "sectionCount": 12
+      },
+      "notes": [
+        "No `- [Title](url)` link entries. Optional per spec, but link lists help retrieval."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://github.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 2274,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "canonical": "https://github.com",
+        "canonicalAbsolute": "https://github.com/",
+        "matchesOrigin": true,
+        "hreflangCount": 8
+      },
+      "notes": []
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
+        "titleLength": 61,
+        "description": "Join the world's most widely adopted, AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.",
+        "descriptionLength": 186,
+        "ogTitle": "GitHub · Change is constant. GitHub keeps you ahead.",
+        "ogDescription": "Join the world's most widely adopted, AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.",
+        "ogType": "object",
+        "h1Count": 4,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Found 4 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "url": "https://svelte.dev/",
+  "origin": "https://svelte.dev",
+  "timestamp": "2026-05-24T13:02:40.613Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 45,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://svelte.dev/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 1674,
+        "lineCount": 23,
+        "hasH1Title": true,
+        "linkCount": 7,
+        "sectionCount": 3
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://svelte.dev/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 24,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "fail",
+      "score": 0,
+      "weight": 15,
+      "details": {
+        "canonical": null
+      },
+      "notes": [
+        "Missing <link rel=\"canonical\">. AI crawlers may dedupe wrong URL."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "fail",
+      "score": 40,
+      "weight": 15,
+      "details": {
+        "title": "Svelte • Web development for the rest of us",
+        "titleLength": 43,
+        "description": "Web development for the rest of us",
+        "descriptionLength": 34,
+        "ogTitle": "",
+        "ogDescription": "",
+        "ogType": "",
+        "h1Count": 2,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Description length 34 is outside the 80-200 sweet spot.",
+        "Missing OpenGraph title/description.",
+        "Found 2 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

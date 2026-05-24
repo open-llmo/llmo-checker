@@ -1,0 +1,113 @@
+{
+  "url": "https://stripe.com/",
+  "origin": "https://stripe.com",
+  "timestamp": "2026-05-24T13:01:57.045Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 89,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://stripe.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 63917,
+        "lineCount": 356,
+        "hasH1Title": true,
+        "linkCount": 268,
+        "sectionCount": 28
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://stripe.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 643,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "canonical": "https://stripe.com/jp",
+        "canonicalAbsolute": "https://stripe.com/jp",
+        "matchesOrigin": true,
+        "hreflangCount": 87
+      },
+      "notes": []
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 82,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [
+          "WebSite",
+          "Organization"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "WebSite",
+          "Organization"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "title": "Stripe | 収益向上のための金融インフラ",
+        "titleLength": 23,
+        "description": "Stripe は、あらゆる規模や業種のビジネスにおける決済の受け入れ、柔軟な請求モデルの構築、および資金移動の管理を支援する、金融サービスプラットフォームです。",
+        "descriptionLength": 80,
+        "ogTitle": "Stripe | 収益向上のための金融インフラ",
+        "ogDescription": "Stripe は、あらゆる規模や業種のビジネスにおける決済の受け入れ、柔軟な請求モデルの構築、および資金移動の管理を支援する、金融サービスプラットフォームです。",
+        "ogType": "website",
+        "h1Count": 2,
+        "htmlLang": "ja-JP"
+      },
+      "notes": [
+        "Found 2 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

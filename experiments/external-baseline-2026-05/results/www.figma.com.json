@@ -1,0 +1,122 @@
+{
+  "url": "https://www.figma.com/",
+  "origin": "https://www.figma.com",
+  "timestamp": "2026-05-24T13:02:13.399Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 69,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://www.figma.com/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "url": "https://www.figma.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 311994,
+        "mentionedBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "cohere-ai"
+        ],
+        "disallowedBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "cohere-ai"
+        ],
+        "hasWildcardUserAgent": true
+      },
+      "notes": []
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "canonical": "https://www.figma.com/",
+        "canonicalAbsolute": "https://www.figma.com/",
+        "matchesOrigin": true,
+        "hreflangCount": 34
+      },
+      "notes": []
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 70,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [
+          "Organization"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "Organization"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "title": "Figma: The Collaborative Interface Design Tool",
+        "titleLength": 46,
+        "description": "Figma is the leading collaborative design platform for building meaningful products. Design, prototype, and build products faster—while gathering feedback all in one place.",
+        "descriptionLength": 172,
+        "ogTitle": "Figma: The Collaborative Interface Design Tool",
+        "ogDescription": "Figma is the leading collaborative design platform for building meaningful products. Design, prototype, and build products faster—while gathering feedback all in one place.",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en"
+      },
+      "notes": []
+    }
+  ]
+}

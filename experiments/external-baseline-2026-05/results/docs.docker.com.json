@@ -1,0 +1,113 @@
+{
+  "url": "https://docs.docker.com/",
+  "origin": "https://docs.docker.com",
+  "timestamp": "2026-05-24T13:01:37.753Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 84,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://docs.docker.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 5671,
+        "lineCount": 85,
+        "hasH1Title": true,
+        "linkCount": 39,
+        "sectionCount": 5
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://docs.docker.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 150,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://docs.docker.com/",
+        "canonicalAbsolute": "https://docs.docker.com/",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 62,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [
+          "TechArticle"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "TechArticle"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "title": "Docker Docs",
+        "titleLength": 11,
+        "description": "Docker Documentation is the official Docker library of resources, manuals, and guides to help you containerize applications.",
+        "descriptionLength": 124,
+        "ogTitle": "Home",
+        "ogDescription": "Docker Documentation is the official Docker library of resources, manuals, and guides to help you containerize applications.",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Title length 11 is outside the 20-70 sweet spot."
+      ]
+    }
+  ]
+}

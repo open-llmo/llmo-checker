@@ -1,0 +1,107 @@
+{
+  "url": "https://docs.python.org/3/",
+  "origin": "https://docs.python.org",
+  "timestamp": "2026-05-24T13:02:49.233Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 46,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://docs.python.org/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://docs.python.org/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 500,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://docs.python.org/3/index.html",
+        "canonicalAbsolute": "https://docs.python.org/3/index.html",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "title": "3.14.5 Documentation",
+        "titleLength": 20,
+        "description": "The official Python documentation.",
+        "descriptionLength": 34,
+        "ogTitle": "Python 3.14 documentation",
+        "ogDescription": "The official Python documentation.",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Description length 34 is outside the 80-200 sweet spot."
+      ]
+    }
+  ]
+}

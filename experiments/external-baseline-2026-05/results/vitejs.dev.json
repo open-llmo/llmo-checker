@@ -1,0 +1,105 @@
+{
+  "url": "https://vitejs.dev/",
+  "origin": "https://vitejs.dev",
+  "timestamp": "2026-05-24T13:01:25.057Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 61,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://vitejs.dev/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 3512,
+        "lineCount": 84,
+        "hasH1Title": true,
+        "linkCount": 43,
+        "sectionCount": 1
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "url": "https://vitejs.dev/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /robots.txt found. AI crawlers will use default allow, but explicit posture is recommended."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "canonical": "https://vite.dev",
+        "canonicalAbsolute": "https://vite.dev/",
+        "matchesOrigin": false
+      },
+      "notes": [
+        "Canonical points to a different origin (https://vite.dev). Intentional only if this page is a republished mirror."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "title": "Vite | Next Generation Frontend Tooling",
+        "titleLength": 39,
+        "description": "Next Generation Frontend Tooling",
+        "descriptionLength": 32,
+        "ogTitle": "Vite",
+        "ogDescription": "Next Generation Frontend Tooling",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en-US"
+      },
+      "notes": [
+        "Description length 32 is outside the 80-200 sweet spot."
+      ]
+    }
+  ]
+}

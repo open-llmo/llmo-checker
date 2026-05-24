@@ -1,0 +1,113 @@
+{
+  "url": "https://www.docker.com/blog/",
+  "origin": "https://www.docker.com",
+  "timestamp": "2026-05-24T13:03:26.994Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 60,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://www.docker.com/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://www.docker.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 1033,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "canonical": "https://www.docker.com/blog/",
+        "canonicalAbsolute": "https://www.docker.com/blog/",
+        "matchesOrigin": true,
+        "hreflangCount": 2
+      },
+      "notes": []
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 74,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [
+          "Corporation",
+          "WebSite",
+          "BreadcrumbList",
+          "CollectionPage"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "WebSite",
+          "BreadcrumbList"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "title": "Docker Blog | Docker",
+        "titleLength": 20,
+        "description": "",
+        "descriptionLength": 0,
+        "ogTitle": "Docker Blog | Docker",
+        "ogDescription": "Gordon understands your environment, proposes fixes, and takes action across your entire Docker workflow. Now generally available. Image 1: Gordon in Docker Desktop Why Gordon Exists  Developers are more productive than ever. AI coding assistants are writing code, merging PRs and cutting review cycles. But the moment something breaks in a container, or a teammate...",
+        "ogType": "website",
+        "h1Count": 0,
+        "htmlLang": "en-US"
+      },
+      "notes": [
+        "Missing <meta name=\"description\">.",
+        "Found 0 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

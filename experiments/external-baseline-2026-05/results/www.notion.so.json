@@ -1,0 +1,109 @@
+{
+  "url": "https://www.notion.so/",
+  "origin": "https://www.notion.so",
+  "timestamp": "2026-05-24T13:01:59.477Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 62,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 85,
+      "weight": 20,
+      "details": {
+        "url": "https://www.notion.so/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 6914,
+        "lineCount": 73,
+        "hasH1Title": false,
+        "linkCount": 49,
+        "sectionCount": 7
+      },
+      "notes": [
+        "Missing top-level `# Title` line."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://www.notion.so/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 1136,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "canonical": "https://www.notion.com/",
+        "canonicalAbsolute": "https://www.notion.com/",
+        "matchesOrigin": false
+      },
+      "notes": [
+        "Canonical points to a different origin (https://www.notion.com). Intentional only if this page is a republished mirror."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "title": "The AI workspace that works for you. | Notion",
+        "titleLength": 45,
+        "description": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster.",
+        "descriptionLength": 124,
+        "ogTitle": "The AI workspace that works for you. | Notion",
+        "ogDescription": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster.",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en-us"
+      },
+      "notes": []
+    }
+  ]
+}

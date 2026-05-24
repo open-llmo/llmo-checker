@@ -1,0 +1,123 @@
+{
+  "url": "https://www.cloudflare.com/",
+  "origin": "https://www.cloudflare.com",
+  "timestamp": "2026-05-24T13:02:07.355Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 93,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://www.cloudflare.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 16879,
+        "lineCount": 183,
+        "hasH1Title": true,
+        "linkCount": 88,
+        "sectionCount": 13
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "url": "https://www.cloudflare.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 1097,
+        "mentionedBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "cohere-ai"
+        ],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": []
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "canonical": "https://www.cloudflare.com/",
+        "canonicalAbsolute": "https://www.cloudflare.com/",
+        "matchesOrigin": true,
+        "hreflangCount": 10
+      },
+      "notes": []
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "pass",
+      "score": 94,
+      "weight": 20,
+      "details": {
+        "blockCount": 3,
+        "typesFound": [
+          "Organization",
+          "WebSite",
+          "WebPage"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "Organization",
+          "WebSite",
+          "WebPage"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 70,
+      "weight": 15,
+      "details": {
+        "title": "Cloudflare: Build for the agent era",
+        "titleLength": 35,
+        "description": "Welcome to Cloudflare - Powering the next generation of applications",
+        "descriptionLength": 68,
+        "ogTitle": "Cloudflare: Build for the agent era",
+        "ogDescription": "Welcome to Cloudflare - Powering the next generation of applications",
+        "ogType": "website",
+        "h1Count": 2,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Description length 68 is outside the 80-200 sweet spot.",
+        "Found 2 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

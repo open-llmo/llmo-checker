@@ -1,0 +1,110 @@
+{
+  "url": "https://linear.app/",
+  "origin": "https://linear.app",
+  "timestamp": "2026-05-24T13:02:02.464Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 68,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://linear.app/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 9443,
+        "lineCount": 218,
+        "hasH1Title": true,
+        "linkCount": 141,
+        "sectionCount": 2
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://linear.app/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 107,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://linear.app",
+        "canonicalAbsolute": "https://linear.app/",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "title": "Linear – The system for product development",
+        "titleLength": 43,
+        "description": "Purpose-built for planning and building products with AI agents.",
+        "descriptionLength": 64,
+        "ogTitle": "Linear – The system for product development",
+        "ogDescription": "Purpose-built for planning and building products with AI agents.",
+        "ogType": "",
+        "h1Count": 1,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Description length 64 is outside the 80-200 sweet spot."
+      ]
+    }
+  ]
+}

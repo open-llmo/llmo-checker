@@ -1,0 +1,103 @@
+{
+  "url": "https://vuejs.org/",
+  "origin": "https://vuejs.org",
+  "timestamp": "2026-05-24T13:01:14.099Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 50,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://vuejs.org/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 7415,
+        "lineCount": 153,
+        "hasH1Title": true,
+        "linkCount": 94,
+        "sectionCount": 1
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "url": "https://vuejs.org/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /robots.txt found. AI crawlers will use default allow, but explicit posture is recommended."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "fail",
+      "score": 0,
+      "weight": 15,
+      "details": {
+        "canonical": null
+      },
+      "notes": [
+        "Missing <link rel=\"canonical\">. AI crawlers may dedupe wrong URL."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "title": "Vue.js - The Progressive JavaScript Framework | Vue.js",
+        "titleLength": 54,
+        "description": "Vue.js - The Progressive JavaScript Framework",
+        "descriptionLength": 45,
+        "ogTitle": "Vue.js",
+        "ogDescription": "Vue.js - The Progressive JavaScript Framework",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en-US"
+      },
+      "notes": [
+        "Description length 45 is outside the 80-200 sweet spot."
+      ]
+    }
+  ]
+}

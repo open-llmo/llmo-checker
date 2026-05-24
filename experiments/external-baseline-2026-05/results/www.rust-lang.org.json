@@ -1,0 +1,101 @@
+{
+  "url": "https://www.rust-lang.org/",
+  "origin": "https://www.rust-lang.org",
+  "timestamp": "2026-05-24T13:02:53.224Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 23,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://www.rust-lang.org/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "url": "https://www.rust-lang.org/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /robots.txt found. AI crawlers will use default allow, but explicit posture is recommended."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "fail",
+      "score": 0,
+      "weight": 15,
+      "details": {
+        "canonical": null
+      },
+      "notes": [
+        "Missing <link rel=\"canonical\">. AI crawlers may dedupe wrong URL."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 70,
+      "weight": 15,
+      "details": {
+        "title": "Rust Programming Language",
+        "titleLength": 25,
+        "description": "A language empowering everyone to build reliable and efficient software.",
+        "descriptionLength": 72,
+        "ogTitle": "",
+        "ogDescription": "A language empowering everyone to build reliable and efficient software.",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en-US"
+      },
+      "notes": [
+        "Description length 72 is outside the 80-200 sweet spot.",
+        "Missing OpenGraph title/description."
+      ]
+    }
+  ]
+}

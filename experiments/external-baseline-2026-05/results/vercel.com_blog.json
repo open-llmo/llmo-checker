@@ -1,0 +1,111 @@
+{
+  "url": "https://vercel.com/blog",
+  "origin": "https://vercel.com",
+  "timestamp": "2026-05-24T13:03:19.165Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 66,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://vercel.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 166836,
+        "lineCount": 1588,
+        "hasH1Title": true,
+        "linkCount": 899,
+        "sectionCount": 19
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://vercel.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 482,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://vercel.com/blog",
+        "canonicalAbsolute": "https://vercel.com/blog",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 70,
+      "weight": 15,
+      "details": {
+        "title": "Blog - Vercel",
+        "titleLength": 13,
+        "description": "Blog posts from the Vercel team and community. Discover the latest in web development.",
+        "descriptionLength": 86,
+        "ogTitle": "Blog - Vercel",
+        "ogDescription": "Blog posts from the Vercel team and community. Discover the latest in web development.",
+        "ogType": "website",
+        "h1Count": 2,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Title length 13 is outside the 20-70 sweet spot.",
+        "Found 2 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

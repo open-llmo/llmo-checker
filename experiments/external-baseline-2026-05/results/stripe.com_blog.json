@@ -1,0 +1,113 @@
+{
+  "url": "https://stripe.com/blog",
+  "origin": "https://stripe.com",
+  "timestamp": "2026-05-24T13:03:17.497Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 78,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://stripe.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 63917,
+        "lineCount": 356,
+        "hasH1Title": true,
+        "linkCount": 268,
+        "sectionCount": 28
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://stripe.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 643,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://stripe.com/blog",
+        "canonicalAbsolute": "https://stripe.com/blog",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 50,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [
+          "CollectionPage"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": []
+      },
+      "notes": [
+        "JSON-LD present but no recognized schema.org entity types."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 70,
+      "weight": 15,
+      "details": {
+        "title": "Stripe Blog: Online Payment Solutions Blog",
+        "titleLength": 42,
+        "description": "Follow the Stripe blog to learn about new product features, the latest in technology, payment solutions, and business initiatives.",
+        "descriptionLength": 130,
+        "ogTitle": "Stripe Blog: Online Payment Solutions Blog",
+        "ogDescription": "Follow the Stripe blog to learn about new product features, the latest in technology, payment solutions, and business initiatives.",
+        "ogType": "",
+        "h1Count": 62,
+        "htmlLang": "en-US"
+      },
+      "notes": [
+        "Found 62 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "url": "https://www.mongodb.com/",
+  "origin": "https://www.mongodb.com",
+  "timestamp": "2026-05-24T13:02:16.745Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 84,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://www.mongodb.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 1490,
+        "lineCount": 40,
+        "hasH1Title": true,
+        "linkCount": 5,
+        "sectionCount": 6
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://www.mongodb.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 3037,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://www.mongodb.com",
+        "canonicalAbsolute": "https://www.mongodb.com/",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 70,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [
+          "Organization"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "Organization"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "title": "MongoDB: The World’s Leading Modern Data Platform | MongoDB",
+        "titleLength": 59,
+        "description": "Get your ideas to market faster with a flexible, AI-ready database. MongoDB makes working with data easy.",
+        "descriptionLength": 105,
+        "ogTitle": "MongoDB: The World’s Leading Modern Data Platform",
+        "ogDescription": "Get your ideas to market faster with a flexible, AI-ready database. MongoDB makes working with data easy.",
+        "ogType": "website",
+        "h1Count": 3,
+        "htmlLang": "en-us"
+      },
+      "notes": [
+        "Found 3 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "url": "https://react.dev/",
+  "origin": "https://react.dev",
+  "timestamp": "2026-05-24T13:01:12.566Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 66,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://react.dev/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 14347,
+        "lineCount": 250,
+        "hasH1Title": true,
+        "linkCount": 177,
+        "sectionCount": 2
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://react.dev/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 24,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "canonical": "https://react.dev/",
+        "canonicalAbsolute": "https://react.dev/",
+        "matchesOrigin": true,
+        "hreflangCount": 8
+      },
+      "notes": []
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "title": "React",
+        "titleLength": 5,
+        "description": "React is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript. React is designed to let you seamlessly combine components written by independent people, teams, and organizations.",
+        "descriptionLength": 260,
+        "ogTitle": "React",
+        "ogDescription": "React is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript. React is designed to let you seamlessly combine components written by independent people, teams, and organizations.",
+        "ogType": "website",
+        "h1Count": 2,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Title length 5 is outside the 20-70 sweet spot.",
+        "Description length 260 is outside the 80-200 sweet spot.",
+        "Found 2 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

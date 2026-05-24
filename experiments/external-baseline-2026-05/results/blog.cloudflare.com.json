@@ -1,0 +1,106 @@
+{
+  "url": "https://blog.cloudflare.com/",
+  "origin": "https://blog.cloudflare.com",
+  "timestamp": "2026-05-24T13:03:25.000Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 44,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://blog.cloudflare.com/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://blog.cloudflare.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 2504,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "canonical": "https://blog.cloudflare.com/",
+        "canonicalAbsolute": "https://blog.cloudflare.com/",
+        "matchesOrigin": true,
+        "hreflangCount": 21
+      },
+      "notes": []
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 70,
+      "weight": 15,
+      "details": {
+        "title": "The Cloudflare Blog",
+        "titleLength": 19,
+        "description": "Get the latest news on how products at Cloudflare are built, technologies used, and join the teams helping to build a better Internet.",
+        "descriptionLength": 134,
+        "ogTitle": "The Cloudflare Blog",
+        "ogDescription": "Get the latest news on how products at Cloudflare are built, technologies used, and join the teams helping to build a better Internet.",
+        "ogType": "website",
+        "h1Count": 0,
+        "htmlLang": "en-us"
+      },
+      "notes": [
+        "Title length 19 is outside the 20-70 sweet spot.",
+        "Found 0 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

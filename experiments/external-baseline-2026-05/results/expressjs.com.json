@@ -1,0 +1,111 @@
+{
+  "url": "https://expressjs.com/",
+  "origin": "https://expressjs.com",
+  "timestamp": "2026-05-24T13:03:06.592Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 38,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://expressjs.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 3028,
+        "lineCount": 35,
+        "hasH1Title": true,
+        "linkCount": 17,
+        "sectionCount": 2
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://expressjs.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 73,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "fail",
+      "score": 0,
+      "weight": 15,
+      "details": {
+        "canonical": null
+      },
+      "notes": [
+        "Missing <link rel=\"canonical\">. AI crawlers may dedupe wrong URL."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "fail",
+      "score": 0,
+      "weight": 15,
+      "details": {
+        "title": "",
+        "titleLength": 0,
+        "description": "",
+        "descriptionLength": 0,
+        "ogTitle": "",
+        "ogDescription": "",
+        "ogType": "",
+        "h1Count": 0,
+        "htmlLang": ""
+      },
+      "notes": [
+        "Missing <title>.",
+        "Missing <meta name=\"description\">.",
+        "Missing OpenGraph title/description.",
+        "Found 0 <h1> elements (recommended: exactly 1).",
+        "Missing <html lang=\"...\"> attribute."
+      ]
+    }
+  ]
+}

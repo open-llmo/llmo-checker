@@ -1,0 +1,116 @@
+{
+  "url": "https://supabase.com/",
+  "origin": "https://supabase.com",
+  "timestamp": "2026-05-24T13:02:11.196Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 94,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://supabase.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 1258,
+        "lineCount": 27,
+        "hasH1Title": true,
+        "linkCount": 18,
+        "sectionCount": 2
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "url": "https://supabase.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 226,
+        "mentionedBots": [
+          "GPTBot",
+          "ClaudeBot",
+          "Google-Extended",
+          "PerplexityBot"
+        ],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": []
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://supabase.com/",
+        "canonicalAbsolute": "https://supabase.com/",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 82,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [
+          "Organization",
+          "WebSite"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "Organization",
+          "WebSite"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "title": "Supabase | The Postgres Development Platform.",
+        "titleLength": 45,
+        "description": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+        "descriptionLength": 159,
+        "ogTitle": "Supabase | The Postgres Development Platform.",
+        "ogDescription": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en"
+      },
+      "notes": []
+    }
+  ]
+}

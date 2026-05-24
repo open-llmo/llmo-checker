@@ -1,0 +1,115 @@
+{
+  "url": "https://redis.io/",
+  "origin": "https://redis.io",
+  "timestamp": "2026-05-24T13:01:44.105Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 93,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://redis.io/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 46830,
+        "lineCount": 248,
+        "hasH1Title": true,
+        "linkCount": 81,
+        "sectionCount": 11
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://redis.io/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 346,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://redis.io/",
+        "canonicalAbsolute": "https://redis.io/",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "pass",
+      "score": 94,
+      "weight": 20,
+      "details": {
+        "blockCount": 3,
+        "typesFound": [
+          "WebPage",
+          "Organization",
+          "BreadcrumbList"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "WebPage",
+          "Organization",
+          "BreadcrumbList"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "title": "Redis - Real-time data for agents & apps",
+        "titleLength": 40,
+        "description": "Developers love Redis. Unlock the full potential of the Redis database with Redis Enterprise and start building blazing fast apps.",
+        "descriptionLength": 130,
+        "ogTitle": "Redis - Real-time data for agents & apps",
+        "ogDescription": "Developers love Redis. Unlock the full potential of the Redis database with Redis Enterprise and start building blazing fast apps.",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en-US"
+      },
+      "notes": []
+    }
+  ]
+}

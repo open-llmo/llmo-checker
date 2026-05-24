@@ -1,0 +1,108 @@
+{
+  "url": "https://kubernetes.io/",
+  "origin": "https://kubernetes.io",
+  "timestamp": "2026-05-24T13:02:56.634Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 45,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://kubernetes.io/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://kubernetes.io/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 148,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "fail",
+      "score": 0,
+      "weight": 15,
+      "details": {
+        "canonical": null
+      },
+      "notes": [
+        "Missing <link rel=\"canonical\">. AI crawlers may dedupe wrong URL."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 70,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [
+          "Organization"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "Organization"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "title": "Kubernetes",
+        "titleLength": 10,
+        "description": "Production-Grade Container Orchestration",
+        "descriptionLength": 40,
+        "ogTitle": "Production-Grade Container Orchestration",
+        "ogDescription": "Kubernetes, also known as K8s, is an open source system for automating deployment, scaling, and management of containerized applications.\nIt groups containers that make up an application into logical units for easy management and discovery. Kubernetes builds upon 15 years of experience of running production workloads at Google, combined with best-of-breed ideas and practices from the community.\nPlanet scale Designed on the same principles that allow Google to run billions of containers a week, Kubernetes can scale without increasing your operations team.",
+        "ogType": "website",
+        "h1Count": 1,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Title length 10 is outside the 20-70 sweet spot.",
+        "Description length 40 is outside the 80-200 sweet spot."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "url": "https://www.cloudflare.com/blog/",
+  "origin": "https://www.cloudflare.com",
+  "timestamp": "2026-05-24T13:03:23.241Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 64,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://www.cloudflare.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 16879,
+        "lineCount": 183,
+        "hasH1Title": true,
+        "linkCount": 88,
+        "sectionCount": 13
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "url": "https://www.cloudflare.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 1097,
+        "mentionedBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "cohere-ai"
+        ],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": []
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "canonical": "https://blog.cloudflare.com/",
+        "canonicalAbsolute": "https://blog.cloudflare.com/",
+        "matchesOrigin": false
+      },
+      "notes": [
+        "Canonical points to a different origin (https://blog.cloudflare.com). Intentional only if this page is a republished mirror."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 70,
+      "weight": 15,
+      "details": {
+        "title": "The Cloudflare Blog",
+        "titleLength": 19,
+        "description": "Get the latest news on how products at Cloudflare are built, technologies used, and join the teams helping to build a better Internet.",
+        "descriptionLength": 134,
+        "ogTitle": "The Cloudflare Blog",
+        "ogDescription": "Get the latest news on how products at Cloudflare are built, technologies used, and join the teams helping to build a better Internet.",
+        "ogType": "website",
+        "h1Count": 0,
+        "htmlLang": "en-us"
+      },
+      "notes": [
+        "Title length 19 is outside the 20-70 sweet spot.",
+        "Found 0 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}

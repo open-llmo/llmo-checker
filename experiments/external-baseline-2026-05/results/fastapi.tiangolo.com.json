@@ -1,0 +1,106 @@
+{
+  "url": "https://fastapi.tiangolo.com/",
+  "origin": "https://fastapi.tiangolo.com",
+  "timestamp": "2026-05-24T13:03:04.877Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 41,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "url": "https://fastapi.tiangolo.com/llms.txt",
+        "httpStatus": 404
+      },
+      "notes": [
+        "No /llms.txt found. See https://llmstxt.org/ for the spec."
+      ]
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 70,
+      "weight": 15,
+      "details": {
+        "url": "https://fastapi.tiangolo.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 1248,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": false
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 100,
+      "weight": 15,
+      "details": {
+        "canonical": "https://fastapi.tiangolo.com/",
+        "canonicalAbsolute": "https://fastapi.tiangolo.com/",
+        "matchesOrigin": true,
+        "hreflangCount": 12
+      },
+      "notes": []
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "fail",
+      "score": 0,
+      "weight": 20,
+      "details": {
+        "blockCount": 0,
+        "typesFound": [],
+        "parseErrors": 0
+      },
+      "notes": [
+        "No JSON-LD found. Entity grounding will rely on text alone."
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 60,
+      "weight": 15,
+      "details": {
+        "title": "FastAPI - FastAPI",
+        "titleLength": 17,
+        "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+        "descriptionLength": 86,
+        "ogTitle": "",
+        "ogDescription": "",
+        "ogType": "",
+        "h1Count": 1,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Title length 17 is outside the 20-70 sweet spot.",
+        "Missing OpenGraph title/description."
+      ]
+    }
+  ]
+}

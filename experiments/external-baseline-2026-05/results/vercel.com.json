@@ -1,0 +1,113 @@
+{
+  "url": "https://vercel.com/",
+  "origin": "https://vercel.com",
+  "timestamp": "2026-05-24T13:02:05.182Z",
+  "checkerVersion": "0.1.0",
+  "scoreVersion": "0.1",
+  "score": 82,
+  "checks": [
+    {
+      "id": "llms-txt",
+      "name": "llms.txt presence and structure",
+      "status": "pass",
+      "score": 100,
+      "weight": 20,
+      "details": {
+        "url": "https://vercel.com/llms.txt",
+        "httpStatus": 200,
+        "byteLength": 166836,
+        "lineCount": 1588,
+        "hasH1Title": true,
+        "linkCount": 899,
+        "sectionCount": 19
+      },
+      "notes": []
+    },
+    {
+      "id": "robots-ai",
+      "name": "AI crawler posture (robots.txt)",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "url": "https://vercel.com/robots.txt",
+        "knownAiBots": [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "CCBot",
+          "Google-Extended",
+          "PerplexityBot",
+          "Applebot-Extended",
+          "cohere-ai"
+        ],
+        "httpStatus": 200,
+        "byteLength": 482,
+        "mentionedBots": [],
+        "disallowedBots": [],
+        "hasWildcardUserAgent": true
+      },
+      "notes": [
+        "No explicit AI-bot rules in robots.txt."
+      ]
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical URL and hreflang",
+      "status": "pass",
+      "score": 90,
+      "weight": 15,
+      "details": {
+        "canonical": "https://vercel.com",
+        "canonicalAbsolute": "https://vercel.com/",
+        "matchesOrigin": true,
+        "hreflangCount": 0
+      },
+      "notes": [
+        "No hreflang alternates — fine for single-language sites."
+      ]
+    },
+    {
+      "id": "jsonld",
+      "name": "JSON-LD structured data",
+      "status": "warn",
+      "score": 62,
+      "weight": 20,
+      "details": {
+        "blockCount": 1,
+        "typesFound": [
+          "SoftwareApplication"
+        ],
+        "parseErrors": 0,
+        "recognizedTypes": [
+          "SoftwareApplication"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "meta",
+      "name": "Semantic metadata and headings",
+      "status": "warn",
+      "score": 80,
+      "weight": 15,
+      "details": {
+        "title": "Vercel: Build and deploy the best web experiences with the AI Cloud",
+        "titleLength": 67,
+        "description": "Vercel gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized web.",
+        "descriptionLength": 111,
+        "ogTitle": "Vercel: Build and deploy the best web experiences with the AI Cloud – Vercel",
+        "ogDescription": "Vercel gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized web.",
+        "ogType": "website",
+        "h1Count": 2,
+        "htmlLang": "en"
+      },
+      "notes": [
+        "Found 2 <h1> elements (recommended: exactly 1)."
+      ]
+    }
+  ]
+}
