@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/open-llmo/llmo-checker/main/assets/banner.svg" alt="llmo-checker — Lighthouse-style CLI for AI-retrievability scoring. Part of the Open LLMO Research Initiative." width="100%">
+</p>
+
 # llmo-checker
 
 > LLMO Score checker — measures AI-retrieval readiness of a URL.

@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="llmo-checker logo">
+  <rect width="512" height="512" fill="#0a1929"/>
+
+  <g transform="translate(256, 200)" text-anchor="middle">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="64" font-weight="700" fill="#f8fafc" letter-spacing="-2">llmo</text>
+    <text y="64" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="36" font-weight="400" fill="#94a3b8" letter-spacing="-1">-checker</text>
+  </g>
+
+  <g transform="translate(120, 320)">
+    <rect x="0" y="0" width="32" height="14" rx="2" fill="#22d3ee"/>
+    <rect x="40" y="0" width="32" height="14" rx="2" fill="#22d3ee"/>
+    <rect x="80" y="0" width="32" height="14" rx="2" fill="#22d3ee"/>
+    <rect x="120" y="0" width="32" height="14" rx="2" fill="#22d3ee"/>
+    <rect x="160" y="0" width="32" height="14" rx="2" fill="#475569"/>
+    <rect x="200" y="0" width="32" height="14" rx="2" fill="#475569"/>
+    <text x="244" y="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600" fill="#22d3ee">85+</text>
+  </g>
+
+  <text x="256" y="410" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="400" fill="#64748b" letter-spacing="3">OPEN LLMO RESEARCH INITIATIVE</text>
+</svg>

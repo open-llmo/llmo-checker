@@ -1,0 +1,45 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="llmo-checker banner">
+  <rect width="1280" height="640" fill="#0a1929"/>
+
+  <g transform="translate(96, 0)">
+    <text x="0" y="220" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="96" font-weight="700" fill="#f8fafc" letter-spacing="-3">llmo-checker</text>
+    <text x="0" y="270" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="500" fill="#22d3ee" letter-spacing="1">v0.1.0 Draft · MIT</text>
+
+    <text x="0" y="350" font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="400" fill="#cbd5e1">Lighthouse-style CLI for AI-retrievability scoring.</text>
+    <text x="0" y="394" font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="400" fill="#cbd5e1">Measure your substrate before assuming what it looks like.</text>
+
+    <text x="0" y="490" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="600" fill="#475569">$ npx llmo-checker https://example.com</text>
+
+    <text x="0" y="580" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="400" fill="#475569" letter-spacing="3">OPEN LLMO RESEARCH INITIATIVE</text>
+  </g>
+
+  <g transform="translate(880, 180)">
+    <text x="0" y="0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="600" fill="#22d3ee" letter-spacing="2">LLMO SCORE</text>
+
+    <text x="0" y="120" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="140" font-weight="700" fill="#f8fafc">94</text>
+    <text x="190" y="120" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="44" font-weight="400" fill="#64748b">/100</text>
+    <text x="0" y="156" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="500" fill="#22d3ee" letter-spacing="2">WELL-GROUNDED</text>
+
+    <g transform="translate(0, 200)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">
+      <text x="0" y="0" fill="#22d3ee" font-weight="700">PASS</text>
+      <text x="64" y="0" fill="#cbd5e1">llms-txt</text>
+      <text x="220" y="0" fill="#64748b" text-anchor="end">90</text>
+
+      <text x="0" y="28" fill="#22d3ee" font-weight="700">PASS</text>
+      <text x="64" y="28" fill="#cbd5e1">robots-ai</text>
+      <text x="220" y="28" fill="#64748b" text-anchor="end">100</text>
+
+      <text x="0" y="56" fill="#22d3ee" font-weight="700">PASS</text>
+      <text x="64" y="56" fill="#cbd5e1">canonical</text>
+      <text x="220" y="56" fill="#64748b" text-anchor="end">100</text>
+
+      <text x="0" y="84" fill="#22d3ee" font-weight="700">PASS</text>
+      <text x="64" y="84" fill="#cbd5e1">jsonld</text>
+      <text x="220" y="84" fill="#64748b" text-anchor="end">94</text>
+
+      <text x="0" y="112" fill="#22d3ee" font-weight="700">PASS</text>
+      <text x="64" y="112" fill="#cbd5e1">meta</text>
+      <text x="220" y="112" fill="#64748b" text-anchor="end">90</text>
+    </g>
+  </g>
+</svg>
